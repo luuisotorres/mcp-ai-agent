@@ -1,0 +1,828 @@
+model: openai/gpt-4o
+contents:
+  - parts:
+      - text: How do I drive from São Paulo to Campinas?
+    role: user
+  - parts:
+      - function_call:
+          id: call_N9jINMvuU3zqkYwjHWH74MLj
+          args:
+            origin: São Paulo, Brazil
+            destination: Campinas, Brazil
+            mode: driving
+          name: maps_directions
+    role: model
+  - parts:
+      - function_response:
+          id: call_N9jINMvuU3zqkYwjHWH74MLj
+          name: maps_directions
+          response:
+            result:
+              content:
+                - type: text
+                  text: |-
+                    {
+                      "routes": [
+                        {
+                          "summary": "Rod. dos Bandeirantes and Rod. Anhanguera",
+                          "distance": {
+                            "text": "92.6 km",
+                            "value": 92573
+                          },
+                          "duration": {
+                            "text": "1 hour 19 mins",
+                            "value": 4752
+                          },
+                          "steps": [
+                            {
+                              "instructions": "Head <b>west</b> on <b>Viaduto Júlio de Mesquita Filho</b>",
+                              "distance": {
+                                "text": "1.0 km",
+                                "value": 1043
+                              },
+                              "duration": {
+                                "text": "1 min",
+                                "value": 82
+                              },
+                              "travel_mode": "DRIVING"
+                            },
+                            {
+                              "instructions": "Continue onto <b>Via Elevado Pres. João Goulart</b>",
+                              "distance": {
+                                "text": "0.2 km",
+                                "value": 235
+                              },
+                              "duration": {
+                                "text": "1 min",
+                                "value": 19
+                              },
+                              "travel_mode": "DRIVING"
+                            },
+                            {
+                              "instructions": "Take the exit on the <b>left</b> toward <b>Lgo. Arouche</b>",
+                              "distance": {
+                                "text": "0.3 km",
+                                "value": 276
+                              },
+                              "duration": {
+                                "text": "1 min",
+                                "value": 27
+                              },
+                              "travel_mode": "DRIVING"
+                            },
+                            {
+                              "instructions": "Merge onto <b>R. Amaral Gurgel</b>",
+                              "distance": {
+                                "text": "0.5 km",
+                                "value": 461
+                              },
+                              "duration": {
+                                "text": "2 mins",
+                                "value": 90
+                              },
+                              "travel_mode": "DRIVING"
+                            },
+                            {
+                              "instructions": "Continue onto <b>Largo do Arouche</b>",
+                              "distance": {
+                                "text": "0.1 km",
+                                "value": 136
+                              },
+                              "duration": {
+                                "text": "1 min",
+                                "value": 31
+                              },
+                              "travel_mode": "DRIVING"
+                            },
+                            {
+                              "instructions": "Slight <b>left</b> onto <b>Av. Duque de Caxias</b>",
+                              "distance": {
+                                "text": "41 m",
+                                "value": 41
+                              },
+                              "duration": {
+                                "text": "1 min",
+                                "value": 8
+                              },
+                              "travel_mode": "DRIVING"
+                            },
+                            {
+                              "instructions": "Keep <b>left</b> to stay on <b>Av. Duque de Caxias</b><div style=\"font-size:0.9em\">Pass by SKINA DA DUQUE CHOPPERIA E RESTAURANTE 24 HORAS (on the left)</div>",
+                              "distance": {
+                                "text": "0.6 km",
+                                "value": 644
+                              },
+                              "duration": {
+                                "text": "3 mins",
+                                "value": 153
+                              },
+                              "travel_mode": "DRIVING"
+                            },
+                            {
+                              "instructions": "Turn <b>left</b> onto <b>Pça. Princesa Isabel</b>/<wbr/><b>Av. Rio Branco</b> (signs for <b>Barra Funda</b>/<wbr/><b>Marg. Tietê</b>)<div style=\"font-size:0.9em\">Continue to follow Av. Rio Branco</div>",
+                              "distance": {
+                                "text": "0.9 km",
+                                "value": 949
+                              },
+                              "duration": {
+                                "text": "3 mins",
+                                "value": 154
+                              },
+                              "travel_mode": "DRIVING"
+                            },
+                            {
+                              "instructions": "Continue onto <b>Viaduto Eng. Orlando Murgel</b>",
+                              "distance": {
+                                "text": "0.6 km",
+                                "value": 575
+                              },
+                              "duration": {
+                                "text": "1 min",
+                                "value": 58
+                              },
+                              "travel_mode": "DRIVING"
+                            },
+                            {
+                              "instructions": "Merge onto <b>Av. Rudge</b><div style=\"font-size:0.9em\">Pass by Sam's Club Bom Retiro (on the right)</div>",
+                              "distance": {
+                                "text": "0.9 km",
+                                "value": 893
+                              },
+                              "duration": {
+                                "text": "2 mins",
+                                "value": 129
+                              },
+                              "travel_mode": "DRIVING"
+                            },
+                            {
+                              "instructions": "<b>Av. Rudge</b> turns slightly <b>right</b> and becomes <b>Pte. da Casa Verde</b>",
+                              "distance": {
+                                "text": "0.3 km",
+                                "value": 319
+                              },
+                              "duration": {
+                                "text": "1 min",
+                                "value": 30
+                              },
+                              "travel_mode": "DRIVING"
+                            },
+                            {
+                              "instructions": "Turn <b>right</b> to merge onto <b>Av. Otaviano Alves de Lima</b>",
+                              "distance": {
+                                "text": "1.2 km",
+                                "value": 1165
+                              },
+                              "duration": {
+                                "text": "2 mins",
+                                "value": 110
+                              },
+                              "travel_mode": "DRIVING"
+                            },
+                            {
+                              "instructions": "Take the ramp to <b>Ceagesp</b>/<wbr/><b>Marg. Pinheiros</b>",
+                              "distance": {
+                                "text": "0.6 km",
+                                "value": 582
+                              },
+                              "duration": {
+                                "text": "1 min",
+                                "value": 36
+                              },
+                              "travel_mode": "DRIVING"
+                            },
+                            {
+                              "instructions": "Merge onto <b>BR-050</b>",
+                              "distance": {
+                                "text": "2.7 km",
+                                "value": 2682
+                              },
+                              "duration": {
+                                "text": "3 mins",
+                                "value": 167
+                              },
+                              "travel_mode": "DRIVING"
+                            },
+                            {
+                              "instructions": "Keep <b>left</b> to stay on <b>BR-050</b>",
+                              "distance": {
+                                "text": "2.1 km",
+                                "value": 2104
+                              },
+                              "duration": {
+                                "text": "2 mins",
+                                "value": 134
+                              },
+                              "travel_mode": "DRIVING"
+                            },
+                            {
+                              "instructions": "Take the ramp to <b>Bandeirantes</b>",
+                              "distance": {
+                                "text": "0.9 km",
+                                "value": 852
+                              },
+                              "duration": {
+                                "text": "1 min",
+                                "value": 50
+                              },
+                              "travel_mode": "DRIVING"
+                            },
+                            {
+                              "instructions": "Continue onto <b>Rod. dos Bandeirantes</b><div style=\"font-size:0.9em\">Toll road</div>",
+                              "distance": {
+                                "text": "32.5 km",
+                                "value": 32485
+                              },
+                              "duration": {
+                                "text": "21 mins",
+                                "value": 1253
+                              },
+                              "travel_mode": "DRIVING"
+                            },
+                            {
+                              "instructions": "Take exit <b>47</b> to merge onto <b>Via Anhanguera</b>/<wbr/><b>Rod. Anhanguera</b>/<wbr/><b>SP-330</b> toward <b>Vinhedo</b>/<wbr/><b>Anhanguera</b>/<wbr/><b>Jundiaí</b>/<wbr/><b>Itatiba</b><div style=\"font-size:0.9em\">Toll road</div>",
+                              "distance": {
+                                "text": "42.1 km",
+                                "value": 42115
+                              },
+                              "duration": {
+                                "text": "29 mins",
+                                "value": 1721
+                              },
+                              "travel_mode": "DRIVING"
+                            },
+                            {
+                              "instructions": "Take exit <b>90</b> toward <b>Campinas</b>/<wbr/><b>Centro</b>",
+                              "distance": {
+                                "text": "1.0 km",
+                                "value": 997
+                              },
+                              "duration": {
+                                "text": "1 min",
+                                "value": 46
+                              },
+                              "travel_mode": "DRIVING"
+                            },
+                            {
+                              "instructions": "Take the ramp to <b>Campinas</b>/<wbr/><b>Centro</b>",
+                              "distance": {
+                                "text": "0.7 km",
+                                "value": 704
+                              },
+                              "duration": {
+                                "text": "1 min",
+                                "value": 42
+                              },
+                              "travel_mode": "DRIVING"
+                            },
+                            {
+                              "instructions": "Merge onto <b>Av. Prestes Maia</b>",
+                              "distance": {
+                                "text": "2.0 km",
+                                "value": 1967
+                              },
+                              "duration": {
+                                "text": "3 mins",
+                                "value": 156
+                              },
+                              "travel_mode": "DRIVING"
+                            },
+                            {
+                              "instructions": "Continue onto <b>Av. João Jorge</b>",
+                              "distance": {
+                                "text": "0.4 km",
+                                "value": 434
+                              },
+                              "duration": {
+                                "text": "1 min",
+                                "value": 69
+                              },
+                              "travel_mode": "DRIVING"
+                            },
+                            {
+                              "instructions": "Keep <b>left</b> to stay on <b>Av. João Jorge</b>",
+                              "distance": {
+                                "text": "0.2 km",
+                                "value": 241
+                              },
+                              "duration": {
+                                "text": "1 min",
+                                "value": 35
+                              },
+                              "travel_mode": "DRIVING"
+                            },
+                            {
+                              "instructions": "Merge onto <b>R. Terminal Cury</b>/<wbr/><b>Viaduto Miguel Vicente Cury</b><div style=\"font-size:0.9em\">Continue to follow Viaduto Miguel Vicente Cury</div>",
+                              "distance": {
+                                "text": "0.1 km",
+                                "value": 112
+                              },
+                              "duration": {
+                                "text": "1 min",
+                                "value": 14
+                              },
+                              "travel_mode": "DRIVING"
+                            },
+                            {
+                              "instructions": "Keep <b>left</b> to continue on <b>Av. Dr. Moraes Salles</b><div style=\"font-size:0.9em\">Pass by Max Ofertas (on the left)</div>",
+                              "distance": {
+                                "text": "0.2 km",
+                                "value": 207
+                              },
+                              "duration": {
+                                "text": "1 min",
+                                "value": 36
+                              },
+                              "travel_mode": "DRIVING"
+                            },
+                            {
+                              "instructions": "Turn <b>left</b> after Loja Par kai (on the left)<div style=\"font-size:0.9em\">Pass by Super Farma (on the right in 350m)</div>",
+                              "distance": {
+                                "text": "0.4 km",
+                                "value": 354
+                              },
+                              "duration": {
+                                "text": "2 mins",
+                                "value": 102
+                              },
+                              "travel_mode": "DRIVING"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+              isError: false
+    role: user
+  - parts:
+      - text: |-
+          To drive from São Paulo to Campinas, follow these directions, which will take approximately 1 hour and 19 minutes over a distance of about 92.6 kilometers:
+
+          1. **Head west** on **Viaduto Júlio de Mesquita Filho** (1.0 km, 1 min).
+          2. **Continue** onto **Via Elevado Pres. João Goulart** (0.2 km, 1 min).
+          3. **Take the exit on the left** toward **Lgo. Arouche** (0.3 km, 1 min).
+          4. **Merge** onto **R. Amaral Gurgel** (0.5 km, 2 mins).
+          5. **Continue** onto **Largo do Arouche** (0.1 km, 1 min).
+          6. **Slight left** onto **Av. Duque de Caxias** (41 m).
+          7. **Keep left** to stay on **Av. Duque de Caxias**, passing by SKINA DA DUQUE CHOPPERIA E RESTAURANTE 24 HORAS on the left (0.6 km, 3 mins).
+          8. **Turn left** onto **Pça. Princesa Isabel**/**Av. Rio Branco**, then continue following **Av. Rio Branco** (0.9 km, 3 mins).
+          9. **Continue** onto **Viaduto Eng. Orlando Murgel** (0.6 km, 1 min).
+          10. **Merge** onto **Av. Rudge**, passing by Sam's Club Bom Retiro on the right (0.9 km, 2 mins).
+          11. **Av. Rudge** turns slightly right and becomes **Pte. da Casa Verde** (0.3 km, 1 min).
+          12. **Turn right** to merge onto **Av. Otaviano Alves de Lima** (1.2 km, 2 mins).
+          13. **Take the ramp** to **Ceagesp**/**Marg. Pinheiros** (0.6 km, 1 min).
+          14. **Merge** onto **BR-050** (2.7 km, 3 mins).
+          15. **Keep left** to stay on **BR-050** (2.1 km, 2 mins).
+          16. **Take the ramp** to **Bandeirantes** (0.9 km, 1 min).
+          17. **Continue** onto **Rod. dos Bandeirantes** (32.5 km, 21 mins).
+          18. **Take exit 47** to merge onto **Via Anhanguera**/**Rod. Anhanguera**/**SP-330** (42.1 km, 29 mins).
+          19. **Take exit 90** toward **Campinas/Centro** (1.0 km, 1 min).
+          20. **Take the ramp** to **Campinas/Centro** (0.7 km, 1 min).
+          21. **Merge** onto **Av. Prestes Maia** (2.0 km, 3 mins).
+          22. **Continue** onto **Av. João Jorge** (0.4 km, 1 min).
+          23. **Keep left** to stay on **Av. João Jorge** (0.2 km, 1 min).
+          24. **Merge** onto **R. Terminal Cury**/**Viaduto Miguel Vicente Cury** (0.1 km, 1 min).
+          25. **Keep left** to continue on **Av. Dr. Moraes Salles** (0.2 km, 1 min).
+          26. **Turn left** after Loja Par kai (on the left), passing by Super Farma on the right in 350m (0.4 km, 2 mins).
+
+          This route includes toll roads, so be prepared for toll fees. Safe travels!
+    role: model
+  - parts:
+      - text: Can you tell me what place is located at 40.748817, -73.985428 and give me the full address?
+    role: user
+  - parts:
+      - function_call:
+          id: call_EMUBRaWe91BGSJyGYLfeLJhs
+          args:
+            latitude: 40.748817
+            longitude: -73.985428
+          name: maps_reverse_geocode
+    role: model
+  - parts:
+      - function_response:
+          id: call_EMUBRaWe91BGSJyGYLfeLJhs
+          name: maps_reverse_geocode
+          response:
+            result:
+              content:
+                - type: text
+                  text: |-
+                    {
+                      "formatted_address": "W 34 St & 5 Av, New York, NY 10001, USA",
+                      "place_id": "ChIJIVU5uqlZwokR2LghIMwsSoQ",
+                      "address_components": [
+                        {
+                          "long_name": "W 34 St & 5 Av",
+                          "short_name": "W 34 St & 5 Av",
+                          "types": [
+                            "establishment",
+                            "point_of_interest",
+                            "transit_station"
+                          ]
+                        },
+                        {
+                          "long_name": "Manhattan",
+                          "short_name": "Manhattan",
+                          "types": [
+                            "political",
+                            "sublocality",
+                            "sublocality_level_1"
+                          ]
+                        },
+                        {
+                          "long_name": "New York",
+                          "short_name": "New York",
+                          "types": [
+                            "locality",
+                            "political"
+                          ]
+                        },
+                        {
+                          "long_name": "New York County",
+                          "short_name": "New York County",
+                          "types": [
+                            "administrative_area_level_2",
+                            "political"
+                          ]
+                        },
+                        {
+                          "long_name": "New York",
+                          "short_name": "NY",
+                          "types": [
+                            "administrative_area_level_1",
+                            "political"
+                          ]
+                        },
+                        {
+                          "long_name": "United States",
+                          "short_name": "US",
+                          "types": [
+                            "country",
+                            "political"
+                          ]
+                        },
+                        {
+                          "long_name": "10001",
+                          "short_name": "10001",
+                          "types": [
+                            "postal_code"
+                          ]
+                        }
+                      ]
+                    }
+              isError: false
+    role: user
+  - parts:
+      - text: |-
+          The location at coordinates 40.748817, -73.985428 is the area of the iconic Empire State Building. The full address is:
+
+          **W 34 St & 5 Av, New York, NY 10001, USA**
+    role: model
+  - parts:
+      - text: Give me reviews for the Eiffel Tower
+    role: user
+  - parts:
+      - function_call:
+          id: call_KtBH42z0TIu1nhcDhmjnji8e
+          args:
+            query: Eiffel Tower
+            location:
+              latitude: 48.8584
+              longitude: 2.2945
+            radius: 500
+          name: maps_search_places
+    role: model
+  - parts:
+      - function_response:
+          id: call_KtBH42z0TIu1nhcDhmjnji8e
+          name: maps_search_places
+          response:
+            result:
+              content:
+                - type: text
+                  text: |-
+                    {
+                      "places": [
+                        {
+                          "name": "Eiffel Tower",
+                          "formatted_address": "Av. Gustave Eiffel, 75007 Paris, France",
+                          "location": {
+                            "lat": 48.85837009999999,
+                            "lng": 2.2944813
+                          },
+                          "place_id": "ChIJLU7jZClu5kcR4PcOOO6p3I0",
+                          "rating": 4.7,
+                          "types": [
+                            "tourist_attraction",
+                            "point_of_interest",
+                            "establishment"
+                          ]
+                        }
+                      ]
+                    }
+              isError: false
+    role: user
+  - parts:
+      - function_call:
+          id: call_IMSk07inFzjnGsRnNQYifPF9
+          args:
+            place_id: ChIJLU7jZClu5kcR4PcOOO6p3I0
+          name: maps_place_details
+    role: model
+  - parts:
+      - function_response:
+          id: call_IMSk07inFzjnGsRnNQYifPF9
+          name: maps_place_details
+          response:
+            result:
+              content:
+                - type: text
+                  text: |-
+                    {
+                      "name": "Eiffel Tower",
+                      "formatted_address": "Av. Gustave Eiffel, 75007 Paris, France",
+                      "location": {
+                        "lat": 48.85837009999999,
+                        "lng": 2.2944813
+                      },
+                      "website": "https://www.toureiffel.paris/fr",
+                      "rating": 4.7,
+                      "reviews": [
+                        {
+                          "author_name": "Lindsey Marion",
+                          "author_url": "https://www.google.com/maps/contrib/107801814861616577627/reviews",
+                          "language": "en",
+                          "original_language": "en",
+                          "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjURdV3bdTuxgPQDRgjl41goa08fUFxhwHzMwlk43LEsk4Bmytw8iQ=s128-c0x00000000-cc-rp-mo-ba5",
+                          "rating": 5,
+                          "relative_time_description": "a week ago",
+                          "text": "Wonderful experience. Clean and well staffed. Washrooms on every level.\nDrinks and snack are tasty. A little expensive but to be expected for an attraction.\nThe views are remarkable. Breathtaking sights.\nHighly recommend buying tickets ahead of time.\nLots of stairs for those who are accessible.",
+                          "time": 1748004977,
+                          "translated": false
+                        },
+                        {
+                          "author_name": "Sylvain Querné",
+                          "author_url": "https://www.google.com/maps/contrib/118172464349616284421/reviews",
+                          "language": "en",
+                          "original_language": "en",
+                          "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjVYPCDLjLPyflXiQhhCYhInWXDPQqLY3nykmzWC9GwXKZ9BiKDR=s128-c0x00000000-cc-rp-mo-ba5",
+                          "rating": 5,
+                          "relative_time_description": "2 weeks ago",
+                          "text": "Great experience. To do in a lifetime, on a sunny day! Or at night... Beware of the pretty long wait, especially if you don't book in advance. Same day tickets can lead to 4+ hours queues... When booking online you will \"only\" wait about 1 hour to get from outside to the top.",
+                          "time": 1747747249,
+                          "translated": false
+                        },
+                        {
+                          "author_name": "nikos frantzis",
+                          "author_url": "https://www.google.com/maps/contrib/114357933326220575036/reviews",
+                          "language": "en",
+                          "original_language": "en",
+                          "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocJtXYVT39TMU19UDF0yo1NFQEkcplInrhoeMlaP1vmUYbHZ-A=s128-c0x00000000-cc-rp-mo-ba5",
+                          "rating": 5,
+                          "relative_time_description": "4 weeks ago",
+                          "text": "Eiffel Tower: An Imposing Symbol with History and a Magical Atmosphere\n\nThe Eiffel Tower (Tour Eiffel), one of the most recognizable and iconic monuments in the world, dominates the Paris skyline, captivating millions of visitors each year. Constructed by Gustave Eiffel and his company for the 1889 World's Fair, it marked the centennial of the French Revolution. Originally intended as a temporary structure, its utility as a radio and television antenna saved it and established it as a lasting symbol of France and industrial progress.\n\nIts construction, which lasted just over two years, two months, and five days, was a technological marvel for its time, utilizing prefabricated iron elements assembled with impressive precision. Despite initial opposition from artists and intellectuals of the era, the Eiffel Tower quickly became a beloved symbol.\n\nToday, a visit to the Eiffel Tower is an experience that combines historical significance with a unique atmosphere. Ascending its various levels, visitors are treated to breathtaking panoramic views of the entire city of Paris. The sense of history is palpable in every metal beam, recalling the era of its construction and the generations who have admired this magnificent feat of engineering.\n\nDuring the day, the tower buzzes with life, as thousands of tourists explore its levels and take in the sights. However, as night falls, a different, more serene atmosphere envelops the structure. The tower's illumination, especially the dazzling display of twinkling lights that occurs every hour, creates a magical and romantic ambiance. Whether observing the lit tower from afar or enjoying the view of the illuminated city from its summit, visitors feel a profound connection to the beauty and history of Paris.\n\nThe Eiffel Tower is not merely a tourist attraction but a living monument that continues to inspire and enchant, offering a unique encounter with the history and atmosphere of one of the world's most romantic cities.",
+                          "time": 1746561465,
+                          "translated": false
+                        },
+                        {
+                          "author_name": "Gábor Horváth",
+                          "author_url": "https://www.google.com/maps/contrib/106060447500158706387/reviews",
+                          "language": "en",
+                          "original_language": "en",
+                          "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjWJ4fbhJ9LM8DX1mG-3J0oSxzKyUKWamXBCXGOfCuh6sGZ00mjD=s128-c0x00000000-cc-rp-mo-ba3",
+                          "rating": 5,
+                          "relative_time_description": "a week ago",
+                          "text": "Visiting the Eiffel Tower was truly a dream come true. Standing beneath this incredible masterpiece of engineering, I was completely in awe. Its elegant iron structure, rising gracefully into the sky, is more than just a monument – it’s a symbol of beauty, history, and human creativity.\n\nThe view from the top is simply breathtaking. Paris stretches out in every direction, and you truly feel like you’re on top of the world.\n\nThe Eiffel Tower isn’t just a must-see – it’s a moment you’ll carry with you forever. I can only describe it in one word: magnificent.",
+                          "time": 1748018171,
+                          "translated": false
+                        },
+                        {
+                          "author_name": "Mark Azzopardi",
+                          "author_url": "https://www.google.com/maps/contrib/110131144294642595497/reviews",
+                          "language": "en",
+                          "original_language": "en",
+                          "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjVlYHvYyNiroc9nNxKd_jKWAYAC6T9mxDyJMk7Y7iu9EmeTbkt-=s128-c0x00000000-cc-rp-mo-ba6",
+                          "rating": 5,
+                          "relative_time_description": "2 weeks ago",
+                          "text": "What a beautiful tower. Such an awe to view it from close up and to go to the top.\n\nWe went when it was quiet on a weekday but I’d say if it’s the weekend you would want to have your tickets pre booked. It is a little crammed at the top even with a quiet day.\n\nIf you have any little ones best to plan without a pram.",
+                          "time": 1747373133,
+                          "translated": false
+                        }
+                      ],
+                      "opening_hours": {
+                        "open_now": false,
+                        "periods": [
+                          {
+                            "close": {
+                              "day": 0,
+                              "time": "2300"
+                            },
+                            "open": {
+                              "day": 0,
+                              "time": "0930"
+                            }
+                          },
+                          {
+                            "close": {
+                              "day": 1,
+                              "time": "2300"
+                            },
+                            "open": {
+                              "day": 1,
+                              "time": "0930"
+                            }
+                          },
+                          {
+                            "close": {
+                              "day": 2,
+                              "time": "2300"
+                            },
+                            "open": {
+                              "day": 2,
+                              "time": "0930"
+                            }
+                          },
+                          {
+                            "close": {
+                              "day": 3,
+                              "time": "2300"
+                            },
+                            "open": {
+                              "day": 3,
+                              "time": "0930"
+                            }
+                          },
+                          {
+                            "close": {
+                              "day": 4,
+                              "time": "2300"
+                            },
+                            "open": {
+                              "day": 4,
+                              "time": "0930"
+                            }
+                          },
+                          {
+                            "close": {
+                              "day": 5,
+                              "time": "2300"
+                            },
+                            "open": {
+                              "day": 5,
+                              "time": "0930"
+                            }
+                          },
+                          {
+                            "close": {
+                              "day": 6,
+                              "time": "2300"
+                            },
+                            "open": {
+                              "day": 6,
+                              "time": "0930"
+                            }
+                          }
+                        ],
+                        "weekday_text": [
+                          "Monday: 9:30 AM – 11:00 PM",
+                          "Tuesday: 9:30 AM – 11:00 PM",
+                          "Wednesday: 9:30 AM – 11:00 PM",
+                          "Thursday: 9:30 AM – 11:00 PM",
+                          "Friday: 9:30 AM – 11:00 PM",
+                          "Saturday: 9:30 AM – 11:00 PM",
+                          "Sunday: 9:30 AM – 11:00 PM"
+                        ]
+                      }
+                    }
+              isError: false
+    role: user
+config:
+  system_instruction: |-
+    When the user asks for routes, travel times, or directions between locations, use the mapping tool to fetch detailed and accurate navigation information. Respond clearly with turn-by-turn steps, estimated time, and mode of transport when available. If the user asks which place is closer or farther, or for cities near a specific location, use the mapping tool to reason geographically.
+
+    You are an agent. Your internal name is "openai_agent".
+
+     The description about you is "An intelligent mapping assistant that provides driving, walking, and public transportation directions between cities or landmarks. The assistant can estimate travel times and distances, suggest optimal routes, and help users understand geographic relationships between locations."
+  tools:
+    - function_declarations:
+        - description: Convert an address into geographic coordinates
+          name: maps_geocode
+          parameters:
+            properties:
+              address:
+                description: The address to geocode
+                type: STRING
+            required:
+              - address
+            type: OBJECT
+        - description: Convert coordinates into an address
+          name: maps_reverse_geocode
+          parameters:
+            properties:
+              latitude:
+                description: Latitude coordinate
+                type: NUMBER
+              longitude:
+                description: Longitude coordinate
+                type: NUMBER
+            required:
+              - latitude
+              - longitude
+            type: OBJECT
+        - description: Search for places using Google Places API
+          name: maps_search_places
+          parameters:
+            properties:
+              query:
+                description: Search query
+                type: STRING
+              location:
+                description: Optional center point for the search
+                properties:
+                  latitude:
+                    type: NUMBER
+                  longitude:
+                    type: NUMBER
+                type: OBJECT
+              radius:
+                description: Search radius in meters (max 50000)
+                type: NUMBER
+            required:
+              - query
+            type: OBJECT
+        - description: Get detailed information about a specific place
+          name: maps_place_details
+          parameters:
+            properties:
+              place_id:
+                description: The place ID to get details for
+                type: STRING
+            required:
+              - place_id
+            type: OBJECT
+        - description: Calculate travel distance and time for multiple origins and destinations
+          name: maps_distance_matrix
+          parameters:
+            properties:
+              origins:
+                description: Array of origin addresses or coordinates
+                items:
+                  type: STRING
+                type: ARRAY
+              destinations:
+                description: Array of destination addresses or coordinates
+                items:
+                  type: STRING
+                type: ARRAY
+              mode:
+                description: Travel mode (driving, walking, bicycling, transit)
+                enum:
+                  - driving
+                  - walking
+                  - bicycling
+                  - transit
+                type: STRING
+            required:
+              - origins
+              - destinations
+            type: OBJECT
+        - description: Get elevation data for locations on the earth
+          name: maps_elevation
+          parameters:
+            properties:
+              locations:
+                description: Array of locations to get elevation for
+                items:
+                  properties:
+                    latitude:
+                      type: NUMBER
+                    longitude:
+                      type: NUMBER
+                  required:
+                    - latitude
+                    - longitude
+                  type: OBJECT
+                type: ARRAY
+            required:
+              - locations
+            type: OBJECT
+        - description: Get directions between two points
+          name: maps_directions
+          parameters:
+            properties:
+              origin:
+                description: Starting point address or coordinates
+                type: STRING
+              destination:
+                description: Ending point address or coordinates
+                type: STRING
+              mode:
+                description: Travel mode (driving, walking, bicycling, transit)
+                enum:
+                  - driving
+                  - walking
+                  - bicycling
+                  - transit
+                type: STRING
+            required:
+              - origin
+              - destination
+            type: OBJECT
