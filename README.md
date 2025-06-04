@@ -6,11 +6,13 @@
   <img src="https://img.shields.io/badge/CometML-Opik-FF6F00?logo=comet&logoColor=white" alt="Opik / CometML">
   <img src="https://img.shields.io/badge/ADK-Google%20Agent%20Development%20Kit-34A853?logo=google&logoColor=white" alt="Google ADK">
 </p>
-This project demonstrates the creation of an intelligent mapping assistant using the Google Agent Development Kit (ADK), OpenAI's GPT-4o model, the Google Maps MCP (Model Context Protocol) Server, and Opik for observability with Comet.ml.
+This project demonstrates the creation of an <b>AI Agent</b> using the <b>Google Agent Development Kit (ADK)</b>, <b>OpenAI's GPT-4o model</b>, the <b>Google Maps MCP Server</b>, and <b>Opik</b> for observability with <b>Comet.ml</b>.
 
-The primary goal of this project was to deepen my understanding of Agent Development principles, the Model Context Protocol, and how to integrate various tools and services into an AI agent.
+The primary goal of this project is to deepen my understanding of <b>Agent Development principles</b>, the application of the Model Context Protocol in practice, and how to integrate its tools and services into an <b>AI Agent</b> for enhanced abilities
+beyond the training data.
 
-Inspired by Santiago Valdarrama's work:
+
+This project is largely inspired by Santiago Valdarrama's tutorial on YouTube:
 *   **Video:** [Building AI Agents with Google's Agent Development Kit (ADK)](https://www.youtube.com/watch?v=lstUnckxfs0)
 *   **Repo:** [svpino/google-adk-sample](https://github.com/svpino/google-adk-sample)
 
@@ -43,21 +45,23 @@ Inspired by Santiago Valdarrama's work:
 ## Key Technologies
 
 ### Google Agent Development Kit (ADK)
+![ADK logo](assets/screenshots/adk.png)
 
-The [Google Agent Development Kit (ADK)](https://google.github.io/adk-docs/) is a Python framework designed to simplify the development of LLM-powered agents. It provides abstractions for models (like `LiteLlm` which allows using various LLM providers), tools, memory, and agent orchestration. ADK also includes a web UI for interacting with and debugging agents.
+The [Google Agent Development Kit (ADK)](https://google.github.io/adk-docs/) is a Python framework designed to simplify the development of <b>AI Agents</b> powered by LLMs. It provides access to <b>tools</b>, <b>memory</b>, <b>agent orchestration</b> and LLMs from providers like OpenAI, Anthropic, Cohere and many others through integration with the `LiteLlm` library. The ADK also includes a <b>web UI</b> for interacting with and debugging agents.
 
 ### Opik & CometML
 
-[Opik](https://www.comet.com/opik) is an open-source observability solution for LLM applications, built by Comet. It allows you to trace, visualize, and debug the interactions within your AI agents, including LLM calls, tool usage, and other operations.
+[Opik](https://github.com/comet-ml/opik) is an open-source observability solution for LLM applications, built by Comet. It allows you to <b>trace</b>, <b>visualize</b>, and <b>debug</b> the interactions within your AI Agents, including <b>LLM calls</b>, <b>tool usage</b>, and other operations.
 In this project, Opik is configured to send traces to [CometML](https://www.comet.com/), providing a rich UI to inspect agent behavior.
 
 ### Model Context Protocol (MCP)
+![MCP](assets/screenshots/mcp.png)
 
-The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) is a specification for how LLMs can interact with external tools and services in a standardized way. It defines a schema for tool descriptions, invocations, and responses. This allows for interoperability between different LLM systems and tool providers.
+The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) is an open protocol that standardizes how applications provide context to LLMs and connect them to different <b>data sources</b> and <b>tools</b>. It defines a schema for <b>tool descriptions</b>, <b>invocations</b>, and <b>responses</b>. This allows for interoperability between different LLM systems and tool providers.
 
 ### Google Maps MCP Server
 
-The [Google Maps MCP Server](https://apidog.com/blog/google-maps-mcp-server/) is a Node.js application that exposes Google Maps Platform APIs as MCP-compliant tools. This allows an ADK agent to easily leverage Google Maps functionalities.
+The [Google Maps MCP Server](https://apidog.com/blog/google-maps-mcp-server/) is a Node.js application that exposes Google Maps Platform APIs as MCP tools. This allows an <b>ADK Agent</b> to easily leverage Google Maps features to deliver more relevant, context-aware responses.
 
 *   **How it runs:** The ADK's `MCPToolset` can automatically start this server using `npx` if it's not already running, as configured in this project.
 *   **Main Tools Exposed:**
@@ -83,6 +87,8 @@ The [Google Maps MCP Server](https://apidog.com/blog/google-maps-mcp-server/) is
 │       ├── maps_place_details_event.png
 │       ├── maps_reverse_geocode_event.png
 │       ├── opik_overall_input_output.png
+|       ├── adk.png
+|       ├── mcp.png
 │       └── opik_traces.png
 ├── examples
 │   └── agent_conversation.yaml
@@ -100,11 +106,11 @@ The [Google Maps MCP Server](https://apidog.com/blog/google-maps-mcp-server/) is
 ### Prerequisites
 
 *   Python 3.11
-*   [UV](https://github.com/astral-sh/uv) (Python package installer and virtual environment manager)
-*   Node.js and npm/npx (for the Google Maps MCP Server, which ADK will manage via `npx`)
-*   A Google Maps Platform API Key with the necessary APIs enabled (Directions API, Geocoding API, Places API, Elevation API).
+*   [uv](https://github.com/astral-sh/uv) (Python package and virtual environment manager)
+*   [Node.js](https://nodejs.org/en) and [npm](https://www.npmjs.com/) / [npx](https://www.npmjs.com/package/npx) (required to run the Google Maps MCP Server, which the ADK will start via `npx`)
+*   A Google Maps Platform API Key?
 *   An OpenAI API Key.
-*   CometML API Key, Project ID, and Workspace (automatically configured if you log in to Comet via CLI, or can be set as environment variables if needed for Opik, though `opik.configure(use_local=False)` typically handles this well with a logged-in Comet CLI).
+*   CometML API Key, Project ID, and Workspace.
 
 ### Installation Steps
 
@@ -130,6 +136,14 @@ The [Google Maps MCP Server](https://apidog.com/blog/google-maps-mcp-server/) is
 
 ### Environment Variables
 
+```bash
+GOOGLE_MAPS_PLATFORM_API_KEY="your-google-maps-api-key"
+OPENAI_API_KEY="your-openai-api-key"
+COMET_API_KEY="your-comet-api-key"
+COMET_WORKSPACE="your-comet-workspace"
+COMET_PROJECT_NAME="your-comet-project-name"
+```
+
 The `.env` file should contain:
 
 *   `GOOGLE_MAPS_PLATFORM_API_KEY`: Your Google Maps Platform API key.
@@ -141,7 +155,6 @@ The `.env` file should contain:
 *   `COMET_WORKSPACE`: Your CometML workspace.
 *   `COMET_PROJECT_NAME`: The CometML project name where traces will be stored.
 
-Opik typically picks up Comet credentials if you've previously logged in via `comet login`.
 
 ### Running the Agent
 
@@ -153,14 +166,14 @@ uv run adk web
 
 This command will:
 1.  Start a FastAPI server.
-2.  Provide a web interface (usually at `http://127.0.0.1:8000`) to interact with your agent.
+2.  Provide a web interface at `http://127.0.0.1:8000` to interact with your agent.
 3.  The `MCPToolset` in `agent.py` is configured to start the Google Maps MCP server via `npx` automatically when the agent needs to use its tools.
 
 ## Screenshots & Usage
 
 ### ADK Web UI
 
-Upon running `uv run adk web` and navigating to `http://127.0.0.1:8000` (or the port shown in your terminal), you'll see the ADK Web UI. You can select your `mcp_agent` (or `openai_agent` as named in the code) and start a conversation.
+Upon running `uv run adk web` and navigating to `http://127.0.0.1:8000` (or the port shown in your terminal), you'll see the ADK Web UI. You can select your Agent, in this case `mcp_agent`, and start a conversation.
 
 *(Screenshot 1: The initial ADK Web UI screen with the chat input.)*
 ![ADK Web UI](assets/screenshots/interface.png)
@@ -168,7 +181,7 @@ Upon running `uv run adk web` and navigating to `http://127.0.0.1:8000` (or the 
 
 ### Agent Using Tools
 
-The agent can understand requests for directions, place details, elevation, and more, using the tools from the Google Maps MCP Server.
+The agent can understand requests for directions, place details, elevation, and more, using the <b>tools</b> from the <b>Google Maps MCP Server</b>.
 
 **Example: Getting Directions**
 The agent responds to "How do I drive from São Paulo to Campinas?" with turn-by-turn directions.
@@ -200,14 +213,14 @@ Shows the agent invoking the `maps_reverse_geocode` tool.
 
 *(Screenshot 5: Event view for `maps_reverse_geocode`.)*
 ![Reverse Geocode Event](assets/screenshots/maps_reverse_geocode_event.png)
-*Caption: Event view detailing a `functionCall` for `maps_reverse_geocode` and its corresponding `functionResponse`.*
+*Caption: Event view detailing a `functionCall` for `maps_reverse_geocode` with `args` and Metadata.*
 
 **Example: `maps_directions` Event Flow**
 Illustrates the sequence of events when the `maps_directions` tool is called.
 
 *(Screenshot 6: Event view for `maps_directions` tool.)*
 ![Directions Tool Event](assets/screenshots/maps_directions_tool_events.png)
-*Caption: The "Events" or "Trace" tab in the ADK UI, showing the invocation details for the `maps_directions` tool.*
+*Caption: The "Events" tab in the ADK UI, showing the invocation details for the `maps_directions` tool.*
 
 ### Opik (CometML) Tracing
 
@@ -235,6 +248,8 @@ Detailed request and response data for LLM calls and tool interactions, presente
 *Caption: The Input/Output tab within an Opik trace in CometML, displaying the request and response of the entire conversation in YAML format.*
 
 These traces are invaluable for debugging, understanding agent behavior, and optimizing performance.
+
+<b><i>Note:</i></b> You can find the entire YAML file for this conversation at `examples/agent_conversation.yaml`
 
 
 ## Code Deep Dive (`agent.py`)
@@ -271,7 +286,7 @@ GOOGLE_MAPS_API_KEY = os.getenv("GOOGLE_MAPS_PLATFORM_API_KEY")
 
 ### Agent Definition
 
-We initialize the agent using OpenAI's GPT-4o model:
+We initialize an <b>ADK Agent</b> with `LlmAgent` using OpenAI's GPT-4o model and the `LiteLlm` library for ADK <> OpenAI integration:
 
 ```python
 root_agent = LlmAgent(
@@ -283,7 +298,7 @@ root_agent = LlmAgent(
 
 ### Tool Configuration
 
-This is where we define the integration with the Google Maps MCP Server:
+This is where we define the integration with the <b>Google Maps MCP Server</b>:
 
 ```python
 tools=[
@@ -302,7 +317,7 @@ tools=[
 ],
 ```
 
-This tells the agent to launch the MCP-compliant server using `npx`, making all Google Maps tools available.
+This tells the agent to launch the MCP server using `npx`, making all Google Maps tools available for our Agent.
 
 ### Observability Callbacks
 
