@@ -39,6 +39,7 @@ This project is largely inspired by Santiago Valdarrama's tutorial on YouTube:
     *   [Agent Definition](#agent-definition)
     *   [MCP Toolset Configuration](#mcp-toolset-configuration)
     *   [Opik Tracing Callbacks](#opik-tracing-callbacks)
+-   [Video Demonstration](#video-demonstration)
 -   [Author](#author)
 -   [License](#license)
 
@@ -335,6 +336,9 @@ after_tool_callback=tracer.after_tool_callback,
 
 This enables deep visibility into every interaction handled by the agent.
 
+## Video Demonstration 
+Check out the video on YouTube where I walk through the project:
+[![Watch the demo](https://img.youtube.com/vi/fh0lkWitz2E/0.jpg)](https://www.youtube.com/watch?v=fh0lkWitz2E)
 
 ## Author
 [Luis Fernando Torres](https://github.com/luuisotorres)
