@@ -9,7 +9,16 @@
 
 
 ### Video Demonstration 
-[![Watch the demo](https://img.youtube.com/vi/fh0lkWitz2E/0.jpg)](https://www.youtube.com/watch?v=fh0lkWitz2E)
+
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=fh0lkWitz2E">
+    <img src="https://img.youtube.com/vi/fh0lkWitz2E/maxresdefault.jpg" alt="Watch the Demo" style="width:80%;">
+  </a>
+  <br>
+  <i>Click the image above to watch the demo on YouTube</i>
+</div>
+
+<br />
 
 This project demonstrates the creation of an <b>AI Agent</b> using the <b>Google Agent Development Kit (ADK)</b>, <b>OpenAI's GPT-4o model</b>, the <b>Google Maps MCP Server</b>, and <b>Opik</b> for observability with <b>Comet.ml</b>.
 
