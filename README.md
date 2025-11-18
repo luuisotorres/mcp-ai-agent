@@ -42,8 +42,8 @@ This project is largely inspired by Santiago Valdarrama's tutorial on YouTube:
 -   [Code Deep Dive (`agent.py`)](#code-deep-dive-agentpy)
     *   [Imports and Setup](#imports-and-setup)
     *   [Agent Definition](#agent-definition)
-    *   [MCP Toolset Configuration](#mcp-toolset-configuration)
-    *   [Opik Tracing Callbacks](#opik-tracing-callbacks)
+    *   [Tool Configuration](#tool-configuration)
+    *   [Observability Callbacks](#observability-callbacks)
 -   [Author](#author)
 -   [License](#license)
 
