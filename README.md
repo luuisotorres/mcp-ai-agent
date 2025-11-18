@@ -6,6 +6,11 @@
   <img src="https://img.shields.io/badge/CometML-Opik-FF6F00?logo=comet&logoColor=white" alt="Opik / CometML">
   <img src="https://img.shields.io/badge/ADK-Google%20Agent%20Development%20Kit-34A853?logo=google&logoColor=white" alt="Google ADK">
 </p>
+
+
+### Video Demonstration 
+[![Watch the demo](https://img.youtube.com/vi/fh0lkWitz2E/0.jpg)](https://www.youtube.com/watch?v=fh0lkWitz2E)
+
 This project demonstrates the creation of an <b>AI Agent</b> using the <b>Google Agent Development Kit (ADK)</b>, <b>OpenAI's GPT-4o model</b>, the <b>Google Maps MCP Server</b>, and <b>Opik</b> for observability with <b>Comet.ml</b>.
 
 The primary goal of this project is to deepen my understanding of <b>Agent Development principles</b>, the application of the Model Context Protocol in practice, and how to integrate its tools and services into an <b>AI Agent</b> for enhanced abilities
@@ -39,7 +44,6 @@ This project is largely inspired by Santiago Valdarrama's tutorial on YouTube:
     *   [Agent Definition](#agent-definition)
     *   [MCP Toolset Configuration](#mcp-toolset-configuration)
     *   [Opik Tracing Callbacks](#opik-tracing-callbacks)
--   [Video Demonstration](#video-demonstration)
 -   [Author](#author)
 -   [License](#license)
 
@@ -335,10 +339,6 @@ after_tool_callback=tracer.after_tool_callback,
 ```
 
 This enables deep visibility into every interaction handled by the agent.
-
-## Video Demonstration 
-Check out the video on YouTube where I walk through the project:
-[![Watch the demo](https://img.youtube.com/vi/fh0lkWitz2E/0.jpg)](https://www.youtube.com/watch?v=fh0lkWitz2E)
 
 ## Author
 [Luis Fernando Torres](https://github.com/luuisotorres)
