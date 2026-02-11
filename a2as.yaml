@@ -1,0 +1,85 @@
+manifest:
+  version: "0.1.3"
+  schema: https://a2as.org/cert/schema
+  subject:
+    name: luuisotorres/mcp-ai-agent
+    source: https://github.com/luuisotorres/mcp-ai-agent
+    branch: main
+    commit: "652d87fe"
+    scope: [mcp_agent/agent.py]
+  issued:
+    by: A2AS.org
+    at: '2026-02-11T16:41:27Z'
+    url: https://a2as.org/certified/agents/luuisotorres/mcp-ai-agent
+  signatures:
+    digest: sha256:KfyJKVOCJZ5afDpA4_JUNDvT0BGvFDrGFvHBBM6ptd4
+    key: ed25519:80w_aHdmDZo71IxxVJ72t8YFQX5kpMdXcSbg0tWoaw0
+    sig: ed25519:4ia_IaEoy-KGWRoj-wb3-qr6NVTQzrpZRM-7flITKOVK-5F6FSB8tRp9Fb2QvNcYyxAL-VX6-8nT-eO6T_qfAw
+
+agents:
+  root_agent:
+    type: instance
+    models: [openai/gpt-4o]
+    tools: [server-google-maps]
+    mcp: [server-google-maps]
+    params:
+      name: openai_agent
+      description: An intelligent mapping assistant that provides driving, walking, and public transportation directions between
+        cities or landmarks. The assistant can estimate travel times and distances, suggest optimal routes, and help users
+        understand geographic relationships between locations.
+      instruction: ['When the user asks for routes, travel times, or directions between locations, use the mapping tool to
+          fetch detailed and accurate navigation information. Respond clearly with turn-by-turn steps, estimated time, and
+          mode of transport when available. If the user asks which place is closer or farther, or for cities near a specific
+          location, use the mapping tool to reason geographically.']
+      before_agent_callback: tracer.before_agent_callback
+      after_agent_callback: tracer.after_agent_callback
+      before_model_callback: tracer.before_model_callback
+      after_model_callback: tracer.after_model_callback
+      before_tool_callback: tracer.before_tool_callback
+      after_tool_callback: tracer.after_tool_callback
+
+models:
+  openai/gpt-4o:
+    type: function
+    agents: [root_agent]
+    params:
+      wrapper: LiteLlm
+      model: openai/gpt-4o
+
+tools:
+  server-google-maps:
+    type: mcp
+    agents: [root_agent]
+    params:
+      class: MCPToolset
+      mcp_server: server-google-maps
+
+mcp:
+  server-google-maps:
+    type: process
+    agents: [root_agent]
+    params:
+      class: MCPToolset
+      connection_type: StdioServerParameters
+      command: npx
+      args: [-y, '@modelcontextprotocol/server-google-maps']
+      env:
+        GOOGLE_MAPS_API_KEY: GOOGLE_MAPS_PLATFORM_API_KEY
+
+imports:
+  agent: agent
+  LiteLlm: google.adk.models.lite_llm.LiteLlm
+  LlmAgent: google.adk.agents.LlmAgent
+  load_dotenv: dotenv.load_dotenv
+  MCPToolset: google.adk.tools.mcp_tool.mcp_toolset.MCPToolset
+  opik: opik
+  OpikTracer: opik.integrations.adk.OpikTracer
+  os: os
+  StdioServerParameters: google.adk.tools.mcp_tool.mcp_toolset.StdioServerParameters
+
+variables:
+  GOOGLE_MAPS_PLATFORM_API_KEY:
+    type: env
+    params:
+      caller: [os.getenv]
+      path: [mcp_agent.agent]
